@@ -14,8 +14,7 @@
             margin: 0;
             height: 100vh;
         }
-
-        .cartel-caida {
+        .cartel-potencia {
             position: absolute;
             top: 0;
             left: 50%;
@@ -26,6 +25,7 @@
             animation: caerCartel 1.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
             animation-delay: 0.5s;
         }
+
 
         .imagen-animada {
             position: absolute;
@@ -40,7 +40,6 @@
             cursor: pointer;
         }
 
-        /* Definimos el movimiento inicial desde fuera de pantalla */
         .v-ordenador { top: 40%; width: 300px; animation-name: entrarDerecha; }
         .v-movil { top: 35%; width: 280px; animation-name: entrarIzquierda; }
 
@@ -62,26 +61,36 @@
 
         /* --- CORRECCIONES PARA MÓVIL --- */
         @media (max-width: 768px) {
-            .v-ordenador, .v-movil {
-                left: auto !important;
-                right: auto !important;
-                width: 200px !important;
-                opacity: 1 !important;
-                position: relative !important;
-                display: block;
-                margin: 20px auto;
-            }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
 
-            .v-ordenador { top: 20% !important; }
-            .v-movil { top: 20% !important; }
-            
-            .cartel-caida { width: 150px !important; }
-        }
+    .imagen-animada {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 200px !important;
+        margin: 10px 0;
+        
+    }
+
+
+    .cartel-potencia {
+        width: 150px !important;
+        position: relative !important;
+        margin-bottom: 30px;
+    }
+}
     </style>
 </head>
 <body>
+    <img src="img/cartel-p.png" class="cartel-potencia" alt="Cartel Informativo">
 
-    <img src="img/cartel-i.png" class="cartel-caida" alt="Cartel Informativo">
 
     <a href="Inicio-ordenador.html">
         <img src="img/vordenador.png" class="imagen-animada v-ordenador" alt="Versión Ordenador">

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido al UteTriC Circus</title>
+    <style>
+        body { 
+            background-image: url('img/fcerrado.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #000000;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .cartel-caida {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            z-index: 10;
+            opacity: 0;
+            animation: caerCartel 1.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+            animation-delay: 0.5s;
+        }
+
+        .imagen-animada {
+            position: absolute;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-animada:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* Definimos el movimiento inicial desde fuera de pantalla */
+        .v-ordenador { top: 40%; width: 300px; animation-name: entrarDerecha; }
+        .v-movil { top: 35%; width: 280px; animation-name: entrarIzquierda; }
+
+        @keyframes caerCartel {
+            0% { transform: translate(-50%, -100%); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translate(-50%, 0%); opacity: 1; }
+        }
+
+        @keyframes entrarDerecha {
+            from { left: -300px; opacity: 0; }
+            to { left: 25%; opacity: 1; } 
+        }
+
+        @keyframes entrarIzquierda {
+            from { right: -300px; opacity: 0; }
+            to { right: 25%; opacity: 1; } 
+        }
+
+        /* --- CORRECCIONES PARA MÓVIL --- */
+        @media (max-width: 768px) {
+            .v-ordenador, .v-movil {
+                left: auto !important;
+                right: auto !important;
+                width: 200px !important;
+                opacity: 1 !important;
+                position: relative !important;
+                display: block;
+                margin: 20px auto;
+            }
+
+            .v-ordenador { top: 20% !important; }
+            .v-movil { top: 20% !important; }
+            
+            .cartel-caida { width: 150px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="img/cartel-i.png" class="cartel-caida" alt="Cartel Informativo">
+
+    <a href="Inicio-ordenador.html">
+        <img src="img/vordenador.png" class="imagen-animada v-ordenador" alt="Versión Ordenador">
+    </a>
+
+    <a href="Inicio-movil.html">
+        <img src="img/vmovil.png" class="imagen-animada v-movil" alt="Versión Móvil">
+    </a>
+
+</body>
+</html>

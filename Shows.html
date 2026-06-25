@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nuestros Shows!</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255); 
+            margin: 0;
+            padding: 0;
+            font-family: 'Rye', cursive;
+        }
+
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            z-index: 100;
+        }
+
+        .contenido {
+            display: flex;
+            justify-content: center; 
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 60px;
+            text-shadow: 2px 2px 10px #ffffff; 
+            margin: 0;
+            text-align: center;
+        }
+
+        .ventana-shows {
+            background-color: #000000; 
+            color: #ffffff;  
+            padding: 40px;
+            border-radius: 20px;
+            border: 4px solid #ffffff;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            text-align: left;
+        }
+
+        h3 { 
+            color: #ffffff; 
+            font-size: 24px; 
+            margin-top: 25px; 
+            border-bottom: 2px solid #ffffff; 
+            padding-bottom: 5px; 
+        }
+
+        p, li { 
+            font-size: 18px; 
+            line-height: 1.6; 
+            margin-bottom: 15px; 
+        }
+
+        .boton-regresar {
+            position: fixed;
+            top: 20px;
+            bottom: 20px;
+            right: 20px;
+            z-index: 200; 
+            transition: transform 0.3s ease;
+        }
+
+        .boton-regresar img {
+            width: 175px;
+            cursor: pointer;
+        }
+        .boton-regresar:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/logob.n.png" alt="Logo de UteTriC Circus" class="logo">
+
+    <a href="Inicio-ordenador.html" class="boton-regresar">
+        <img src="img/regresar1.png" alt="Volver al inicio">
+    </a>
+
+    <div class="contenido">
+        <h1>¡Nuestros Shows!</h1>
+    </div>
+
+    <center>
+    <div class="ventana-shows">
+        <h2 style="text-align: center;">Nuestra Cartelera</h2>
+        <h3>Show Principal</h3>
+        <ul>
+            <li>Los saja boys - 10:00 hrs</li>
+        </ul>
+    </div>
+
+    <div class="ventana-shows" style="margin-top: 40px;">
+        <h2 style="text-align: center;">Recomendaciones de Bienestar</h2>
+        
+        <h3>Alimentación</h3>
+        <p>Al igual que los atletas del circo, tú también debes cuidar tu cuerpo. ¡Mente sana en cuerpo sano!</p>
+        <p>La alimentación debe incluir frutas, verduras, proteínas, carbohidratos y lípidos saludables. Recuerda mantenerte hidratado. Una dieta saludable favorece el bienestar físico y mental.</p>
+        <p><strong>¿Sabías que...?</strong> Los chapulines tienen más proteína que un filete de bistec y el amaranto contiene los nueve aminoácidos esenciales que tus células requieren.</p>
+
+        <h3>Prevención de lesiones</h3>
+        <p>En el circo las lesiones más comunes son: esguinces y torceduras en tobillos, rodillas y muñecas, así como desgarres musculares. Para prevenirlas, se requiere entrenamiento, descanso y verificar que trampolines, trapecios y escaleras estén en perfectas condiciones.</p>
+
+        <h3>Funcionamiento muscular</h3>
+        <p>Los músculos están conformados por proteínas llamadas <strong>Actina y Miosina</strong>. Estas requieren ATP para permitir la contracción muscular. El buen funcionamiento de este proceso se relaciona con una buena alimentación.</p>
+
+        <h3>Bienestar y cuidado animal</h3>
+        <p>Antes de 2015, en México se utilizaban animales silvestres en los circos. Actualmente, su uso está prohibido; ahora solo se pueden utilizar animales domésticos como perros, gatos, caballos y conejos bajo estrictas normas de cuidado.</p>
+    </div>
+</center>
+</body>
+</html>

@@ -12,7 +12,7 @@
         .capa { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; }
 
         .capa-gradas { 
-            background-image: url('img/fondo1.jpg'); 
+            background-image: url('img/fondo1-1.jpeg'); 
             background-repeat: no-repeat; 
             background-position: center center; 
             background-size: 100% 100%; 
@@ -28,30 +28,31 @@
             animation: soloCaer 1.5s ease-out forwards;
             animation-delay: 0.4s;
             animation-fill-mode: backwards;
-}
+        }
         .capa-interfaz { 
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
             z-index: 3; pointer-events: auto; 
         }
 
        .cartel-principal-btn {
-    background: none; 
-    border: none; 
-    cursor: pointer;
-    position: absolute; 
-    top: -2%; 
-    left: 41%; 
-    width: 235px;
-    z-index: 5; 
-    transition: transform 0.3s ease;
-    animation: soloCaerCartel 1.5s ease-out forwards;
-    animation-delay: 0.4s;
-    animation-fill-mode: backwards;
-}
+            background: none; 
+            border: none; 
+            cursor: pointer;
+            position: absolute; 
+            top: -2%; 
+            left: 41%; 
+            width: 235px;
+            z-index: 5; 
+            transition: transform 0.3s ease;
+            animation: soloCaerCartel 1.5s ease-out forwards;
+            animation-delay: 0.4s;
+            animation-fill-mode: backwards;
+        }
 
-.cartel-principal-btn:hover { 
-    transform: scale(1.15) translateY(0);
-}
+        .cartel-principal-btn:hover { 
+            transform: scale(1.15) translateY(0);
+        }
+
         .shows {
             position: absolute;
             top: 45%; 
@@ -63,6 +64,17 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease; 
             transform: scale(1);
             will-change: transform;
+        }
+
+        .personaje-flotante {
+           position: absolute;
+           bottom: -300px;
+           left: 50%;
+           transform: translateX(-50%);
+           width: 250px;
+           z-index: 4;
+           animation: entrarDesdeAbajo 1.5s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
+           animation-delay: 1.2s;
         }
 
         .shows:hover {
@@ -169,14 +181,14 @@
 
         /* ANIMACIONES */
         @keyframes soloCaer {
-    0% { transform: translateY(-100vh); }
-    100% { transform: translateY(0); }
-}
+           0% { transform: translateY(-100vh); }
+           100% { transform: translateY(0); }
+        }
 
-@keyframes soloCaerCartel {
-    0% { transform: translateY(-100vh); }
-    100% { transform: translateY(0); }
-}
+        @keyframes soloCaerCartel {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(0); }
+        }
 
         @keyframes entrarFlechas {
             0% { opacity: 0; transform: translateX(50px); }
@@ -187,44 +199,12 @@
             0% { left: 100%; opacity: 1; }
             100% { left: 70%; opacity: 1; }
         }
-@media (max-width: 768px) {
-    .capa-gradas { background-size: cover !important; }
 
-    .capa-interfaz { position: fixed !important; display: block !important; }
+        @keyframes entrarDesdeAbajo {
+            0% { bottom: -300px; opacity: 0; }
+            100% { bottom: 0; opacity: 1; }
+        }
 
-    .cartel-principal {
-        position: absolute !important;
-        top: -2% !important;
-        left: 42% !important;
-        transform: translateX(-50%) !important;
-        width: 125px !important;
-    }
-
-    .shows {
-        position: absolute !important;
-        bottom: 5% !important;
-        right: 3% !important;
-        left: auto !important;
-        width: 125px !important;
-        top: 12% !important;
-        transform: none !important;
-    }
-
-    .contenedor-flecha {
-        position: absolute !important;
-        bottom: 5% !important;
-        left: 5% !important;
-        width: 130px !important;
-        transform: none !important;
-    }
-    
-    .f-izquierda { top: 10% !important;
-    left: 5% !important; }
-    .f-derecha {top: 20% !important;
-    left: 5% !important; }
-    
-    .flecha { width: 100% !important; }
-}
     </style>
 </head>
 <body>
@@ -237,6 +217,8 @@
         <a href="Shows.html">
             <img src="img/shows.png" class="shows">
         </a>
+
+        <img src="img/personaje-1.png" class="personaje-flotante" alt="Personaje del Circo">
 
         <div class="contenedor-flecha f-izquierda">
             <button class="flecha" onclick="abrirInfo('proyecto')">
